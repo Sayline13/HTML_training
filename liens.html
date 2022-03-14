@@ -4,24 +4,28 @@
         <title>[42]Liens de l'amou...beurkkk</title>
     </head>
 
-    <body>
+    <body style="background-color:cornsilk"> 
 
-        <h1 id="top"><ins>Liens renvoyants vers des sections de la page</ins></h1>
+        <h1 id="top"; style="background-color:aquamarine"><ins>Liens renvoyants vers des sections de la page</ins></h1>
 
         <!-- Pour faire pareil mais avec d'autres pages, simplement rajouter le "/#xxx" à la fin du lien. (http://www.blabla.com/#top)
         Il faut bien sur pour cela connaitre l'id de la section de destination -->
 
+        <!-- Ah, et tant qu'on y est, c'est comme ça qu’on laisse un commentaire dans un code HTML =) -->
+
         <h2>Glossaire de la page :</h2>
 
         <p>
-        <a href="#top">Sommet de la page</a><br/>
         <a href="#liens">Liens vers d'autres sites</a><br/>
         <a href="#self">Liens vers d'autres pages du même site</a><br/>
         <a href="#mail">Envoyer un mail</a><br/>
         <a href="#target">Liens dans une autres fenêtre</a><br/>
+        <a href="#images">Chapitre 2 : Les images</a>
         </p>
 
-        <h1 id="liens"><ins>Liens vers d'autres sites</ins></h1>
+        <hr/>
+
+        <h1 id="liens"; style="background-color:rgb(218, 125, 125)"><ins>Liens vers d'autres sites</ins></h1>
 
         <p>
             <h2>Critiques de film :</h2>
@@ -33,30 +37,39 @@
             </ul>
         </p>
 
-        <h1 id="self"><ins>Liens vers d'autres pages du même site</ins></h1>
+        <hr>
+
+        <h1 id="self"; style="background-color:aquamarine"><ins>Liens vers d'autres pages du même site</ins></h1>
 
         <p>
             <h2>Mes Pages :</h2>
             
             <ul>
+                <li><a href="balises.html">Les différentes balises HTML</a></li>
                 <li><a href="listes.html">Listes</a></li>
-                <li><a href="text.html">Text</a></li>    
+                <li><a href="text.html">Text</a></li> 
+                <li><a href="tableaux.html">Exemples de tableaux</a></li>   
                 <li><a href="exercise1/exercise_1.html">Exercise 01</a></li>
             </ul>
         </p>
 
-        <h1 id="mail"><ins>Liens pour envoyer un email</ins></h1>
+        <hr>
+
+        <h1 id="mail"; style="background-color:rgb(218, 125, 125)"><ins>Liens pour envoyer un email</ins></h1>
 
         <p>
             <a href="mailto:adresse@truc.com">Envoyer un mail</a>
         </p>
 
-        <h1 id="target"><ins>Liens dans une autre fenêtre</ins></h1>
+        <hr>
+
+        <h1 id="target"; style="background-color:aquamarine"><ins>Liens dans une autre fenêtre</ins></h1>
 
         <p>
             <h2>les mêmes liens qu'avant mais qui s'ouvrent dans une autre fenêtre</h2>
             
             <ul>
+                <li><a href="balises.html" target="_blank">Les différentes balises HTML</a></li>
                 <li><a href="listes.html" target="_blank">Listes</a></li>
                 <li><a href="text.html" target="_blank">Text</a></li>    
                 <li><a href="exercise1/exercise_1.html" target="_blank">Exercise 01</a></li>
@@ -64,6 +77,43 @@
 
         </p>
 
-        <p><a href="#top">Sommet de la page</a></p>
+        
     </body>
+
+    <hr>
+
+    <body>
+
+        <h1 id="images"><ins>Les images</ins></h1>
+
+        <image src="image02.jpg" alt="un zoli chaton" title="Regardez comme il est trop mimi ce chaton <3" width="600" height="450"/>
+
+        <p>Ceci est un text pour dire que le chaton de l'image du dessus est trop choupi choupi</p>
+
+        <hr>
+
+        <p><image src="image04.jpg" alt="eden's girls" title="Elles sont trop cuuuuuuuuuuute" width="600" height="600"/>Ceci est un autre text, pour dire
+        que cette image est encore beaucoup plus choupi choupi choue que le chaton d'avant. (D'ailleur, la position du text n'est pas au meme endroit non plus ^^)</p>
+
+        <hr>
+
+        <p>Bon par contre ici on est d'accord pour dire<img src="image03.jpeg" alt="Baby Yoda" title="Le jugement de baby Yoda" width="100" height="100">que cette image est vraiment mal placée.
+        Même baby Yoda le pense, ca se voit dans son regard</p>
+
+        <hr/>
+
+        <figure>
+            <img src="image01.png" alt="image exemple" height="400" width="600">
+            <br/>
+            <figcaption>Une image utilisée en exemple pour "figure"</figcaption>
+        </figure>
+
+        <!-- Dans les anciennes version HTML, on utilisait aussi le tag "align" pour definir la position de l'image par rapport au text : align="left". Cette fonction à été
+        supprimée depuis HTML 5 et est remplacée par une fonction CSS. Même si elle fonctionne toujours, on eviteras de l'employer.-->
+
+    </body>
+
+    <p><a href="#top">Sommet de la page</a></p>
+
+
 </html>

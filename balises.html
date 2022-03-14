@@ -1,0 +1,156 @@
+<html>
+
+<head>
+
+    <title>[42] Les differentes balises HTML</title>
+
+</head>
+
+<body style="background-color:cornsilk">
+
+    
+    <h1 id="top"><ins><b>Les différentes balises HTML</b></ins></h1>
+
+    <h2>Glossaire</h2>
+
+    <ol>
+        <li><a href="#titre">Les titres</li>
+        <li><a href="#elements">Les éléments d'une page</a></li>
+        <li><a href="#text">Mise en forme du texte</a></li>
+        <li><a href="#page">Mises en page</a></li>
+        <li><a href="#listes">Les listes</a></li>
+        <li><a href="#liens">Les liens</a></li>
+        <li><a href="#images">Les images</a></li>
+    </ol>
+
+    <p style="color:red"><i>Sur cette page, et affin de faciliter la mise en page des exemples, les "[" représentent des "<" et les "]" des ">"</i></p>
+
+    <h2 id="titres" title="Hey vous m'avez trouvé, je suis l'exemple de la balise title ci dessous"><ins>Les titres<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <p>La taille est de plus en plus petite plus le niveau augmente</p>
+
+    <ul>
+        <li>h1 : Titre principal</li>
+        <li>h2 : Titre de niveau 2</li>
+        <li>h3 : Titre de niveau 3</li>
+        <li>h4 : Titre de niveau 4</li>
+        <li>h5 : Titre de niveau 5</li>
+        <li>h6 : Titre de niveau 6</li>
+        <li>title : ajoute une définition sur un élément au passage de la souris, allez, passez la souris sur le titre de ce paragraphe pour voir =)</li>
+    </ul>
+
+    <h2 id="elements"><ins>Les éléments qui composent une page<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <ul>
+        <li>head : fournit des informations relatives à la page et comprend généralement un élément "title"</li>
+        <li>title : titre affiché sur la barre du navigateur, de l'onglet</li>
+        <li>body : contenu qui doit être affiché dans la fenetre du navigateur, le "corps" de la page</li>
+        <li>p : défini un paragraphe, un espace sera défini entre chaque paragraphe</li>
+    </ul>
+
+    <p>On peut définir des attributs au paragraphe, en les ajoutants à la balise. par exemple : [p lang="fr"]indique que le text du paragraphe est en français.</p>
+
+    <h2 id="text"><ins>Mise en forme du texte<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <ul>
+        <li>strong : mets le texte en <strong>gras</strong>, indique que le texte est d'une grande importance</li>
+        <li>b : caractères <b>gras</b> aussi, mais n'as pas la meme valeure pour un lecteur d'ecran</li>
+        <li>i : caractères en <i>italique</i></li>
+        <li>sup : caractères devant etre placés en <sup>exposants</sup></li>
+        <li>sub : caractères devant etre placés en <sub>inverse de exposant, mais j'ai plus le nom</sub></li>
+        <li>ins : <ins>souligne</ins> le texte</li>
+        <li>del : <del>barre</del> le texte</li>
+        <li>s : <s>défini un contenu qui n'est plus exact mais qui ne doit pas être supprimé</s></li>
+        <li><s>font : définissais un paramêtre d'écriture, genre la couleure, avant CSS. N'est plus utilisé mais fonctionne toujours</s></li>
+
+    </ul>
+
+    <h2 id="page"><ins>Mise en page générale<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <ul>
+        <li>br\ : ajoute un retour à la ligne sans lignes vides</li>
+        <li>hr\ : ajoute une ligne horizontale de séparation</li>
+        <li>em : indique une accentuation qui change subtilement le sens de la phrase.
+            <em>par défaut affiché en italique</em></li>
+        <li>blockquote : <blockquote cite="balises.html">citations qui occupent tout un paragraphe, possibilité d'ajouter la source dans le bloque.
+            [blockquote cite="source"]
+        </blockquote></li>
+        <li>q : s'emploie avec les citations courtes, <q>les navigateurs sont sensés placer des guillemets autour du contenu.</q></li>
+        <li>abbr : permet de définir une abbreviation avec vue de la définition au passage de la souris. -> 
+            Le <abbr title="Professeur">Pr</abbr> Stephen truc = [abbr title="Professeur"]Pr[/abbr]</li>
+        <li>cite : en cas de <cite>références</cite> à un autre document, mets le text en italique [cite]blablabla[/cite]</li>
+        <li>dfn : sert à indiquer la définition d'un nouveau terme. Une <dfn>définition</dfn> est un truc sympa</li>
+        <li>style : peut s'insérer dans les balises pour définir un style à un élément, comme le fond de celui-ci. ( style="")</li>
+            <ul>
+                <li style="background-color:aqua">background-color: : défini la couleur de l'arrière fond de l'élément</li>
+                <li style="color:darkorchid">color: : défini la couleur du texte de tout l'élement (h1, body, p, li,..)</li>
+            </ul>
+        <li>address : sert à indiquer les coordonnées de l'auteur de la page comme son mail ou son adresse, affich; en italique</li>
+        <p>[address][p][a href="mailto:xxx"]xxx[/a][/p]   [p]742 evergreen terasse[/p] [/address]</p>
+        <li>!-- : permet de mettre des annotations sur le code qui ne seront pas prises en compte par le navigateur</li>
+    </ul>
+
+    <h2 id="listes"><ins>Les listes<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <ul>
+        <li>ol : défini une liste ordonnée et numerotée</li>
+        <li>ul : défnini une liste non ordonnée et donc non numerotée, comme celle ci</li>
+        <li>li : défini les éléments de la liste</li>
+        <li>dl : défini une liste de définitions</li>
+        <ul>
+        <li>dt : défini le terme à .... bah définir</li>
+        <li>dd : défini la définition</li>
+        </ul>
+    
+    <P>exemple: [dl] [dt]mot[/dt] [dd]défintion du mot[/dd] [/dl] 
+        <dl>
+            <dt>Mot</dt>
+                <dd>Définition du mot</dd>
+        </dl>
+    </P>
+    </ul>
+
+    <p>on peut avoir des sous-listes en remettant un [ul](ou autre). <a href="listes.html">Voir l'exemple sur cette page</a></p>
+
+    <h2 id="liens"><ins>Les liens<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <p>url absolue = adresse complète menant à un site précis
+        <br>
+    url relative = le nom d'une page du même site, le système de classement des liens de dossier est pareil que sur windows : 
+    <ol>
+        <li>le document est dans un sous dossier du dossier ou l'on se trouve : "dossier1/dossier2/dossier3/document.html</li>
+        <li>le document est dans un dossier "parent": "../../../document.html</li>
+    </ol>
+    </p>
+
+    <ul>
+        <li>a : création d'un lien</li>
+        <li>href="" : défini la cible du lien</li>
+        <li>target : permet de définir la fenêtre de destination (_blank = nouvelle fenêtre)</li>
+        <li>mailto : envoye un mail à l'adresse définie. [a href="mailto:adresse@truc.com"]Message affiché[/a]</li>
+    </ul>
+
+    <h2 id="images"><ins>Les images<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <p>Des exemples peuvent êtres trouvés <a href="liens.html#images">sur cette page</a></p>
+
+    <ul>
+        <li>img : ajoute une image</li>
+        <li>src : précise l'emplacment de l'image (un site ou un dossier du site)</li>
+        <li>alt : description textuelle de l'image, utile pour les recherches google</li>
+        <li>title : ajoute un texte visible en passant la souris sur l'image</li>
+        <li>height : indique la hauteur de l'image en pixels</li>
+        <li>width : indique la largeur de l'image en pixels</li>
+        <li>figure : permet de grouper un commentaire avec une ou plusieurs photos</li>
+        <li>ficaption : défini le commentaire associé aux images</li>
+        <li><s>align : utilisée dans les anciennes versions de HTML, aujourd'hui elle est remplacée par du CSS</s></li>
+    </ul>
+
+    <p>[img src="source de l'image" alt="hey google trouve moi" title="le texte au passage de la souris height="100" width="100"/]</p>
+    <p>La position de l'image par rapport au texte peut aussi être définie, <a href="liens.html#images">comme démontré ici</a></p>
+
+</body>
+<a href="#top">Sommet de la page</a>
+<br>
+<a href="liens.html">retour à la première page</a>
+</html>
