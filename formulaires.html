@@ -144,6 +144,137 @@
         <input type="text" name="email"/>
         <input type="image" src="subscribe.png" width="100" height="30"/>
     </form>
+
+    <hr>
+
+    <h2><ins>Les étiquettes de contrôles</ins></h2>
+
+    <p>Le code d'illustration des contrôles de formulaire est resté simple car le rôle de chacun était indiqué par du texte placé en regard.
+        Chaque contrôle peut toutefois disposer de son propre élément [label], ce qui rend le formulaire accessible aux internautes souffrant d'un handicap visuel
+    </p>
+
+    <label>Age : <input type="text" name="age"/></label>
+    <br>
+    <input id="female" type="radio" name="gender" value="f">
+    <label for="female">Femme</label>
+    <input id="male" type="radio" name="gender" value="m">
+    <label for="male">Homme</label>
+
+    <hr>
+
+    <h2><ins>Regroupement d'élements</ins></h2>
+
+    <fieldset>
+        <legend>Informations de contact</legend>
+        <label>E-mail :<br>
+        <input type="text" name="email"/></label><br>
+        <label>Mobile :<br>
+        <input type="text"  name="mobile"/></label><br>
+        <label>Téléphone :<br>
+        <input type="text" name="telephone"/></label>
+    </fieldset>
+
+    <hr>
+
+    <h2><ins>Validation d'un formulaire</ins></h2>
+
+    <form action="http://www.exemple.fr/login.php" method="get">
+        <p>Nom d'utilisateur :
+            <input type="text" id="username" name="username" size="15" maxlength="30" required="required"/>
+        </p>
+    </form>
+
+    <hr>
+
+    <h2><ins>Saisie d'une date</ins></h2>
+
+    <form action="http://www.exemple.fr/bookings/" method="post">
+        <label for="username">Date de départ :</label>
+        <input type="date" name="depart"/>
+        <input type="submit" value="Réserver"/>
+    </form>
+
+    <h2><ins>Adresse de messagerie, url et champ de recherche</ins></h2>
+
+    <fieldset>
+        <legend>Divers exemples</legend>
+        <label>Merci d'indiquer votre adresse e-mail :<br>
+        <input type="email" name="email" placeholder="Saisir une adresse e-mail"/><input type="submit" value="Envoyer"/></label><br>
+        <label>Merci d'indiquer l'adresse du site web :<br>
+        <input type="url" name="website" placeholder="Saisir une URL"/><input type="submit" value="Envoyer"/></label><br>
+        <label>Rechercher :<br>
+        <input type="search" name="search" placeholder="Saisir un mot clé"/><input type="submit" value="Recherche"></label>
+    </fieldset>
+
+    <hr>
+
+    <h2><ins>Exemple concret final</ins></h2>
+
+    <form action="http://www.exemple.fr/review.php" method="get">
+        <fieldset>
+            <legend>
+                Vos informations de contact :
+            </legend>
+            <label>
+                Nom :
+                <input type="text" name="name" size="30" maxlength="100">
+            </label>
+            <br>
+            <label>
+                E-mail :
+                <input type="email" name="email" size="30" maxlength="100">
+            </label>
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>
+                Vos commentaires :
+            </legend>
+            <p>
+                <label for="hear-about">
+                    Comment nous avez-vous connus ?
+                </label>
+                <select name="referrer" id="hear-about">
+                    <option value="google">google</option> 
+                    <option value="friend">Ami</option>
+                    <option value="advert">Publicité</option>
+                    <option value="other">Autre</option>
+                </select>
+            </p>
+            <p>
+                Reviendrez-vous sur notre site ?
+                <br>
+                <label>
+                    <input type="radio" name="rating" value="yes"/>
+                    Oui
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="no"/>
+                    Non
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="maybee"/>
+                    Peut-être
+                </label>
+            </p>
+            <p>
+                <label for="comments">
+                    Commentaires :
+                </label>
+                <br>
+                <textarea rows="4" cols="40" id="comments">
+                </textarea>
+            </p>
+            <label>
+                <input type="checkbox" name="subscribe" checked="checked"/>
+                Abonnez-moi à votre lettre d'actualité
+            </label>
+            <br>
+            <input type="submit" value="Envoyer"/>
+        </fieldset>
+    </form>
+
 </body>
 <br>
 <hr>
