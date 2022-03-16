@@ -21,6 +21,8 @@
         <li><a href="#listes">Les listes</a></li>
         <li><a href="#liens">Les liens</a></li>
         <li><a href="#images">Les images</a></li>
+        <li><a href="#tableaux">Les tableaux</a></li>
+        <li><a href="#form">Les formulaires</a></li>
     </ol>
 
     <p style="color:red"><i>Sur cette page, et affin de faciliter la mise en page des exemples, les "[" représentent des "<" et les "]" des ">"</i></p>
@@ -149,7 +151,83 @@
     <p>[img src="source de l'image" alt="hey google trouve moi" title="le texte au passage de la souris height="100" width="100"/]</p>
     <p>La position de l'image par rapport au texte peut aussi être définie, <a href="liens.html#images">comme démontré ici</a></p>
 
+    <h2 id="tableaux"><ins>Les tableaux<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <p>Des exemples peuvent êtres trouvés <a href="tableaux.html">sur cette page</a></p>
+
+    <ul>
+        <li>table : création du tableau</li>
+        <li>tr : défini une ligne du tableaux  (Table Row)</li>
+        <li>td : défini une cellule du tableau (Table Data)</li>
+        <li>th : défini une en-tête du tableau (Tables Head)</li>
+            <ul>
+                <li>scope="col" : indique que l'en-tête concerne une colonne</li>
+                <li>scope="row" : indique que l'en-tête concerne une ligne</li>
+            </ul>
+        <li>colspan="" : défini le nombre de colonnes occupées par une cellule</li>
+        <li>rowspan="" : défini le nombre de lignes occupées par une cellule</li> 
+        <li>thead : en-tête d'un tableau (long)</li>
+        <li>tbody : corps d'un tableau (long)</li>
+        <li>tfoot : pied d'un tableau (long)</li>   
+    </ul>
+
+    <h2 id="form"><ins>Les formulaires<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+
+    <p>Des exemples peuvent êtres trouvés <a href="formulaires.html">sur cette page</a></p>
+
+    <ul>
+        <li>form : élément définissant un formulaire</li>
+        <li>action : tout élément [form] à besoin d'un attribut action, précise l'URL de la page qui recevra les informations du formulaire</li>
+        <li>method : il existe deux méthodes d'envoi de formulaires :</li>
+            <ul>
+                <li>get : les valeures saisies sont ajoutées à la fin de l'url [action], utile pour une recherche google par exemple, 
+                    récupère des données sans en ajouter</li>
+                <li>post : les valeures sont envoyées dans une en-tête http, pour formulaires longs, envoyer un fichier, comprend des données sensibles,
+                    ajoute des infos dans une base de données</li>
+            </ul>
+        <li>id : sert à identifier le formulaire parmis les autres éléments de la page</li>
+        <li>size : servais à définir la valeure de champ de texte, remplacé par CSS</li>
+        <li>maxlength : limite le nombre de caractères acceptés dans un champ</li>
+        <li>name : chaque contrôle d'un formulaire exige un attribut "name" pour les différencier</li>
+        <li>textarea : permet de créer une zone de texte</li>
+        <li>select : liste déroulante</li>
+            <ul>
+                <li>name : nom envoyé au serveur avec les réponses</li>
+                <li>option : options disponibles</li>
+                    <ul>
+                        <li>value="" : valeure réponse qui sera envoyée au serveur</li>
+                        <li>selected="selected" : valeure sélectionnée par défaut au chargement de la page</li>
+                    </ul>
+                <li>size : précise le nombre d'options à afficher dans le menu déroulant</li>
+                <li>multiple="multiple" : permet de choisir plusieurs réponses</li>
+            </ul>
+        <li>input : créer différents contrôles de formulaires, la valeure de son attribut "type"détermine le type du champ qui sera ajouté</li>
+            <ul>
+                <li>type="text" : crée un champ de saisie d'une ligne de text</li>
+                <li>type="password" : crée un champ de saisie mais cache les caractères qui sont introduits</li>
+                <li>type="radio" : permet de sélectionner une option parmis plusieurs</li>
+                    <ul>
+                        <li>name : la valeure doit être identique pour l'ensemble des boutons "radio" d'une même question</li>
+                        <li>value : la valeure qui sera envoyée au serveur quand l'option est cochée</li>
+                        <li>checked="checked" : indique quel bouton est coché de base au chargement de la page, un par question</li>
+                    </ul>
+                <li>type="checkbox" : permet de sélectionner une ou plusieurs options</li>
+                    <ul>
+                        <li>name : la valeure doit être identique pour l'ensemble des choix d'une même question</li>
+                        <li>value : la valeure qui sera envoyée au serveur quand l'option est cochée</li>
+                        <li>checked="checked" : indique quelles cases seront cochées de base au chargement de la page, plusieurs possibles par question</li>
+                    </ul>
+                <li>type="file" : créé un champ avec un bouton "parcourir"permettant de joindre un fichier</li>
+                <li>type="submit" : créé un bouton d'envoi pour soumettre le formulaire au serveur</li>
+                    <ul>
+                        <li>value : détermine le texte qui s'affiche dans le bouton</li>
+                    </ul>
+                <li>type="image" : utiliser une image comme bouton d'envoi</li>
+                <li>type="hidden" : permet d'ajouter des informations qui seront envoyées en même temps que le formulaire mais qui n'apparaissent pas sur la page</li>
+            </ul>
+    </ul>
 </body>
+<hr>
 <a href="#top">Sommet de la page</a>
 <br>
 <a href="liens.html">retour à la première page</a>

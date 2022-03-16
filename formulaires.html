@@ -1,0 +1,153 @@
+
+<html>
+
+
+<head>
+    <title>[42] Les formulaires</title>
+</head>
+
+<body style="background-color:cornsilk">
+
+    <h1 id="top"><ins><b>Les formulaires</b></ins></h1>
+
+    <p>Pour différencier les données saisies , les informations sont envoyées du navigateur vers le serveur sous forme de 
+        couple "nom-valeure"
+    </p>
+
+    <h2 id="structure"><ins>Structure d'un formulaire</ins></h2>
+
+    <form action="http://www.exemple.fr/login.php" method="get">
+        <p>Emplacement des contrôles du formulaire</p>
+    </form>
+
+    <hr>
+
+    <h2 id="text"><ins><b>Les champs de texte</b></ins></h2>
+
+    <form action="http://www.exemple.fr/login.php" method="get">
+        <p>Nom d'utilisateur :
+            <input type="text" id="username" name="username" size="15" maxlength="30"/>
+        </p>
+    </form>
+
+    <hr>
+
+    <h2 id="password"><ins><b>Saisie d'un mot de passe</b></ins></h2>
+
+    <form action="logs.txt" method="post">
+        <p>Nom d'utilisateur :
+            <input type="text" name="username" size="15" maxlength="30"/>
+        </p>
+        <p>Mot de passe :
+            <input type="password" name="password" size="15" maxlength="30"/>
+        </p>
+    </form>
+
+    <hr>
+
+    <h2 id="zone"><ins><b>Les zones de texte</b></ins></h2>
+
+    <form action="http://www.exemple.fr/comments.php">
+        <p>Que pensez-vous du HTML ?</p>
+        <textarea name="comments" cols="20" rows="4">
+            Saisissez votre commentaire...
+        </textarea>
+    </form>
+
+    <hr>
+
+    <h2><ins>Les boutons radio</ins></h2>
+
+    <form action="exemple.fr/profile.php">
+        <p>Choisissez votre genre de musique préféré :
+            <br>
+            <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+            <input type="radio" name="genre" value="punk"/> Punk
+            <input type="radio" name="genre" value="metal"/> Metal
+        </p>
+    </form>
+
+    <hr>
+
+    <h2><ins>Les cases à cocher</ins></h2>
+
+    <form action="exemple.fr/profile.php">
+        <p>Choisissez vos genres de musique préféré :
+            <br>
+            <input type="checkbox" name="genre" value="rock" checked="checked" /> Rock
+            <input type="checkbox" name="genre" value="punk"/> Punk
+            <input type="checkbox" name="genre" value="metal"/> Metal
+        </p>
+    </form>
+
+    <hr>
+
+    <h2><ins>Les listes déroulantes</ins></h2>
+
+    <form action="http://www.exemple.fr/profile.php">
+        <p>Bla Bla bla ?</p>
+        <select name="devices">
+            <option value="ipod">iPod</option>
+            <option value="radio">Radio</option>
+            <option value="computeur">Ordinateur</option>
+        </select>
+    </form>
+
+    <hr>
+
+    <h2><ins>Les séléctions multiples</ins></h2>
+
+    <form action="http://www.exemple.fr/profile.php">
+        <p>Jouez-vous des instruments suivants ?
+            (pour sélectionner plusieurs instruments, appuyez sur la touche Ctrl, pour un PC,
+            ou Cmd, pour un Mac, pendant que vous cliquez sur les options/)</p>
+        <select name="instruments"  size="3" multiple="multiple">
+            <option value="guitar" selected="selected">Guitare</option>
+            <option value="drums">Batterie</option>
+            <option value="keyboard">Clavier</option>
+            <option value="bass">Basse</option>
+        </select>
+    </form>
+    
+    <hr>
+
+    <h2><ins>Envoi de fichier</ins></h2>
+
+    <p>Si vous souhaitez permettre à l'internaute d'envoyer un fichier vous devez utiliser un élément [input] de type file.</p>
+
+    <form action="mailto:exemple@gmail.com" method="post">
+        <p>Envoyez vos fichiers :</p>
+        <input type="file" name="user-file" /><br>
+        <input type="submit" value="Envoyer"/>
+    </form>
+
+    <hr>
+
+    <h2><ins>Bouton d'envoi</ins></h2>
+    
+    <p>Le bouton d'envoi est utilisé pour soumettre le formulaire au serveur</p>
+    
+    <form action="http://www.exemple.fr/subscribe.php">
+        <p>Abonnez vous a notre liste de diffusion :</p>
+        <input type="text" name="email"/>
+        <input type="submit" name="subscribe" value="M'abonner"/>
+    </form>
+
+    <hr>
+
+    <h2><ins>Bouton image</ins></h2>
+
+    <p>Remplace le bouton "envoyer"de base par une image</p>
+
+    <form action="http://wwww.exemple.fr/subscribe.php">
+        <p>Abonnez vous à notre liste de diffusion</p>
+        <input type="text" name="email"/>
+        <input type="image" src="subscribe.png" width="100" height="30"/>
+    </form>
+</body>
+<br>
+<hr>
+<a href="#top">Retour au sommet de la page</a>
+<br>
+<a href="liens.html">Retour à la première page</a>
+</html>
