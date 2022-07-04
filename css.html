@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>[42] Le CSS</title>
+
+    <link href="CSS.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+    <h1><ins>Le CSS</ins></h1>
+
+    <h2 id=top><ins>Menu</ins></h2>
+
+    <ol>
+        <li><a href="#expli">Explications</a></li>
+        <li><a href="#select">Les selecteurs CSS</a></li>
+        <li><a href="#cascade">Cascade des règles CSS</a></li>
+        <li><a href="#heritage">Héritage</li></a>
+        <li><a href="#color">Les couleurs</a></li>
+        <li><a href="#text">Texte</a></li>
+    </ol>
+
+    <h2 id="expli"><ins>Explications</ins></h2>
+
+    <p>Pour comprendre le fonctionnement de CSS il faut imaginer qu'une boite invisible entoure chaque element HTML.
+        Il existe deux types d'elements distinct :
+    </p>
+
+    <ol>
+        <li>niveau bloc : elements qui commencent sur une nouvelle ligne (h1 à h6, p, body, div,...)</li>
+        <li>niveau text : elements qui restent de le flux du texte et nhe commencent pas sur une nouvelle ligne (b, i, ins, img, em, span,...)</li>
+    </ol>
+
+    <p>Grace a CSS, nous pouvons ajouter une bordure autour de chaque boite, préciser sa largeur et sa hauteur, et definir sa couleur d'arriere plan. Nous pouvons aussi 
+        modifier l'aspect du texte dans la boite comme sa couleur, sa taille et sa police.
+    </p>
+
+    <p>CSS se fonde sur l'association de regles aux elements HTML. ces regles regissent l'affichage des elements indiques et comprennent deux parties : 
+        <ol>
+            <li><ins class="red">un sélecteur</ins> : cible l'element auquel la regle s'applique. La meme regle peut concerner plusieurs elements si ceux-ci sont separés par des virgules.</li>
+            <li><ins class="green">une declaration</ins> : précise le style des elemements designes par le selecteur. Chaque declaration est constituée d'une propriete et sa valeure.
+                Les differentes declarations sont séparees par des points virgules.
+            </li>
+        </ol>
+    </p>
+
+    <p><ins>Styles CSS externes</ins> : Utilise une page annexe .css liee pour definir les styles. Une page HTML peut employer plusieurs feuille de style CSS, il suffit de définir
+    un element [link] pour chaque fichier CSS</p>
+        <ul>
+            <li>link : indique au navigateur l'emplacement du fichier CSS qui definit les styles de la page. Sans balise de fermeture. Place dans l'element [head] de la page</li>
+            <li>type : indique le type du document lie. Sa valeure doit etre "text/css"</li>
+            <li>rel : definit la relation entre la page HTML et le fichier lié. Sa valeure doit etre "stylesheet" dans le cas d'un lien vers un fichier CSS.</li>
+        </ul>
+
+    <p><ins>Styles CSS internes</ins> : les regles CSS peuvent egalement etre declarées dans la page HTML en les insérant dans un element [style], generalement place dans l'element.
+    L'element [style] doit utiliser l'attribut type pour indiquer que les styles sont definis en CSS. Sa valeure doit etre : [style type="text/css"] parametres [/style]</p>
+
+    <h2 id="select"><ins>Les selecteurs CSS</ins></h2>
+
+    <p>Il existe differents types de selecteurs CSS pour que vous puissiez appliquer des règles à des éléments précis d'un document HTML</p>
+
+        <table class="csst">
+            <tr>
+                <th scope="col" class="cssh">Selecteur</th>
+                <th scope="col" class="cssh">Description</th>
+                <th scope="col" class="cssh">Exemple</th>
+            </tr>
+
+            <tr>
+                <td>Selecteur universel</td>
+                <td>S'applique a tous les élements du document</td>
+                <td>* {}  Cible tous les éléments de la page</td>
+            </tr>
+
+            <tr>
+                <td>Selecteur de type</td>
+                <td>Correspond aux noms des éléments</td>
+                <td>h1, h2, h3 {}  Ciles les éléments [h1], [h2] et [h3]</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Selecteurs de classe</td>
+                <td rowspan="2">Correspond aux elements dont la valeure de l'attribut class est celle indiquee apres le point.</td>
+                <td>.note {}  Cible tous les elements dont l'attribut class a la valeure note</td>
+            </tr>
+
+            <tr>
+                <td>p.note {}  Cible uniquement les elements [p] dont l'attribut class a la valeure note</td>
+            </tr>
+
+            <tr>
+                <td>Selecteur d'identifiant</td>
+                <td>Correspond a l'element dont la valeure de l'attribut id est celle indiquée apres le symbole diese</td>
+                <td>#introduction {}   Cible l'element dont l'attribut id a la valeure introduction</td>
+            </tr>
+
+            <tr>
+                <td>Selecteur d'enfant</td>
+                <td>Correspond aux elements qui sont les enfants direct d'un autre</td>
+                <td>li>a {}  Cible tous les elements [a] qui sont des enfants d'un element [li] (mais sans les autres elements [a] de la page</td>
+            </tr>
+
+            <tr>
+                <td>Selecteur de descendant</td>
+                <td>Correspond aux elements qui sont des descendants de celui indique (pas seulement ces enfants directs)</td>
+                <td>p a {}   Cible tous les elements [a] qui se trouvent dans un eleement [p] meme ceux a plusieurs niveaux d'imbrication</td>
+            </tr>
+
+            <tr>
+                <td>Selecteur de freres adjacent</td>
+                <td>Correspond a l'element enfant qui suit immediatement un autre enfant de meme parent</td>
+                <td>h1+p {}  cible le premier element [p] qui vient apres un element [h1] (sans les elements [p] suivants)</td>
+            </tr>
+
+            <tr>
+                <td>Selcteur de frere general</td>
+                <td>Correspond aux elements qui sont les freres d'un autre, meme s'ils ne le suivent pas directement</td>
+                <td>h1~p {}   Si deux elements [p] sont les freres d'un element [h1], la regle s'applique aux deux</td>
+            </tr>
+        </table>
+
+    <h2 id="cascade"><ins>Cascade des règles CSS</ins></h2>
+    <ul>
+        <li>Dernière règles : Si deux selecteurs sont identiques, le dernier est prioritaire</li>
+        <li>Spécificité : Si un selecteur est plus specifique que les autres, les regles les plus precises sont prioritaires</li>
+            <ul>
+                <li>h1 est plus precis que *</li>
+                <li>p b est plus precis que p</li>
+                <li>p#intro est plus precis que p</li>
+            </ul>
+        <li>Important : en ajoutant !important apres la valeure d'une propriete, on indique qu'elle doit etre consideree plus importante que les autres regles qui 
+            s'appliquent au meme element</li>
+    </ul>
+
+    <h2 id="heritage"><ins>Héritage</ins></h2>
+    <p>Si vous definissez les proprietes font-family ou color sur un element [body], elles s'appliquent a la plupart des elements enfants.
+         En effet, la valeur de la propriete font-family est herite par les elements enfants. Cela vous evite d'appliquer ces proprietes a un grand
+         nombre d'elements et conduit a des feuilles de style plus simple</p>
+    <p>Ce principe ne concerne pas certaines autres proprietes, come background-color ou border, qui ne sont pas heritees par les elements enfants. 
+        Si c'etait le cas, la page aurait probablement un aspect quelque peu neglige.</p>
+    
+    <h2 id="color"><ins>Les couleurs</ins></h2>
+
+    <ul>
+        <li>color : precise la couleur du texte d'un element</li>
+        <li>background-color : CSS traite chaque element HTML comme s'il apparaissait a l'interieur d'une boite. Permet de modifier la couleur d'arriere plan du fond de la boite.</li>
+        <li>opacity : permet de preciser la transparence d'un element et de ses enfants</li>
+        <li>rgba : permet d'affecter une couleur, a la maniere d'une valeur RVB, mais avec une quatrieme composante pour la transparence. (0,0,0,0.5). 
+            Cette valeure alpha est un nombre entre 0 et 1. La valeure de RGBA affecte seulement l'element auquel elle est appliquee.</li>
+        <li>hsl : autre expression des couleurs. La valeure commene par les lettres hsl, suivies, entre paranthese, de la valeure de chaque composante :</li>
+            <ul>
+                <li>Teinte : (hue) s'exprime sous forme d'un angle entre 0 et 360 degres.</li>
+                <li>Saturation : elle est donnee sous forme de pourcentage.</li>
+                <li>Luminosite : la luminosite est indiquee sous forme de pourcentage, 0% correspondant au blanc, 50% a la couleur normale, 100% au noir</li>
+            </ul>
+        <li>hsla : permet de definir un e couleur comme precedement, a partir d'une teinte, d'une saturation et d'une luminosite, mais ajoute une quatrieme valeur pour 
+            la transparence (a l'instar de rgba)</li>
+            <ul>
+                <li>Alpha : cette valeur est un nombre entre 0 et 1.0. Par exemple, 0.5 correspond a une transparence de 50% et 0.75, a une opacite de 75%</li>
+            </ul>
+    </ul>
+
+    <h2 id="text"><ins>Texte</ins></h2>
+
+    <ul>
+        <li>font-family : permet d'indiquer la police dans laquelle doit etre affiche le texte des elements selectionnes par la regle CSS. 
+            La valeure de cette propriete est le nom de la police choisie. 
+            On peut fournir une liste de police separees par des virgules afin que, si l'internaute ne dispose pas de votre premier choix, le navigateur 
+            puisse essayer l'une des autres polices de la liste. 
+            Lorsque le nom d'une police comprend plusieurs mots, il doit etre place entre guillements.</li>
+        <li>font-size : permet de preciser la taille de la police. Il existe plusieurs manieres de proceder :</li>
+            <ul>
+                <li>pixels : la taille est souvent indiquee en pixels car les designers web ont ainsi un controle tes precis sur l'espace occupé par le texte. 
+                    Le nombre de pixels est suivi des lettres px.</li>
+                <li>pourcentage : Dans les navigteurs, le texte a une taille par defaut fixee a 16px. Par consquent, une taille de 75% equivaut a 12px,.... 
+                    Si une regle donne au texte de l'element [body] une taille de 75% (12px) et si une autre regle precise que le contenu d'un element dans l'element [body] 
+                    doit avoir une taille de 75% ce contenu sera affiche en 9px (75 % de 12px)</li>
+                <li>em : un em est quivalent a la largeur de la lettre m. (16px = 1em)</li>
+            </ul>
+        <li>@font-face : permet d'utiliser une police meme si elle n'est pas sur l'ordinateur de l'internaute. Pour cela, indiquer le chemin vers un exemplaire de cette police. 
+            La polie souhaitee est ajoutee a la feuille de style via une regle @font-face (voir code source de cette page)</li>
+            <ul>
+                <li>font-family : precise le nom de la police. Il peut ensuite etre emplooye comme valeure de la propriete font-family dans les autres regles.</li>
+                <li>src : indique le chemin de la police.</li>
+                    <!-- @font-face {
+                            font-family: 'ChunkFiveRegular';
+                            src: url('fonts/chunkfive.eot');} -->
+            </ul>
+        <li>font-weight : permet de mettre du texte en gras. Deux valeurs sont possibles : normal, bold</li>
+        <li>font-style : texte en italique. Troisw valeurs possibles : normal, italic, oblique (si italic existe pas pour la police, force le penchage)</li>
+        <li>text-transform : permet de modifier la casse du texte</li>
+            <ul>
+                <li>uppercase : le texte est affiche en majuscule</li>
+                <li>lowercase : le texte est affiche en minuscule</li>
+                <li>capitalize : La premiere lettre de chaque mot est en majuscule</li>
+            </ul>
+        <li>text-decoration : precise la decoration du texte</li>
+            <ul>
+                <li>none : toute application  deja appliquee au texte est retiree</li>
+                <li>underline : une ligne apparait sous le texte</li>
+                <li>overline : une ligne apparait au-dessus du texte</li>
+                <li>line-through : les mots sont barre d'un trait</li>
+                <li>blink : le texte clignote, mais cet effet est generalement deconseille car genant</li>
+            </ul>
+        <li>line-height : interligne. (en em)</li>
+        <li>letter-spacing : espace entre les lettres. (en em)</li>
+        <li>word-spacing : espace entre les mots. (en em)</li>
+    </ul>
+</body>
+<hr>
+</br>
+</br>
+</br> 
+<div id="footer">
+    <form action="#top">
+        <button class="a2" type="submit">Sommet de la page</button>
+    </form>
+    <br>
+    <form action="liens.html">
+        <button class="a2" type="submit">1ere page</button>
+    </form>
+    </div>
+
+
+<!-- <hr>
+<div id="footer">
+  <ul>
+      <li class="a3"><a href="#top">Sommet de la page</a></li>
+      <li class="a3"><a href="liens.html">Premiere page</a></li>
+  </ul> -->
+    </div>
+
+

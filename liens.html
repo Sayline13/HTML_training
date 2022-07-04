@@ -2,30 +2,36 @@
 
     <head>
         <title>[42]Liens de l'amou...beurkkk</title>
+
+        <link href="CSS.css" type="text/css" rel="stylesheet"/>
+
     </head>
 
     <body style="background-color:cornsilk"> 
 
-        <h1 id="top"; style="background-color:aquamarine"><ins>Liens renvoyants vers des sections de la page</ins></h1>
+        <h1 id="top"><ins>Liens renvoyants vers des sections de la page</ins></h1>
 
         <!-- Pour faire pareil mais avec d'autres pages, simplement rajouter le "/#xxx" à la fin du lien. (http://www.blabla.com/#top)
         Il faut bien sur pour cela connaitre l'id de la section de destination -->
 
-        <!-- Ah, et tant qu'on y est, c'est comme ça qu’on laisse un commentaire dans un code HTML =) -->
+        <!-- Ah, et tant qu'on y est, c'est comme ça qu’on laisse un commentaire dans un code HTML =)kk -->
 
         <h2>Glossaire de la page :</h2>
 
         <p>
-        <a href="#liens">Liens vers d'autres sites</a><br/>
-        <a href="#self">Liens vers d'autres pages du même site</a><br/>
-        <a href="#mail">Envoyer un mail</a><br/>
-        <a href="#target">Liens dans une autres fenêtre</a><br/>
-        <a href="#images">Chapitre 2 : Les images</a>
+            <ol>
+                <li><a href="#liens">Liens vers d'autres sites</a></li>
+                <li><a href="#self">Liens vers d'autres pages du même site</a></li>
+                <li><a href="#mail">Envoyer un mail</a></li>
+                <li><a href="#target">Liens dans une autres fenêtre</a></li>
+                <li><a href="#images">Chapitre 2 : Les images</a></li>
+                <li><a href="#iframe">Exemples d'iframe</a></li>
+            </ol>
         </p>
 
         <hr/>
 
-        <h1 id="liens"; style="background-color:rgb(218, 125, 125)"><ins>Liens vers d'autres sites</ins></h1>
+        <h1 id="liens"><ins>Liens vers d'autres sites</ins></h1>
 
         <p>
             <h2>Critiques de film :</h2>
@@ -39,13 +45,14 @@
 
         <hr>
 
-        <h1 id="self"; style="background-color:aquamarine"><ins>Liens vers d'autres pages du même site</ins></h1>
+        <h1 id="self"><ins>Liens vers d'autres pages du même site</ins></h1>
 
         <p>
             <h2>Mes Pages :</h2>
             
             <ul>
                 <li><a href="balises.html">Les différentes balises HTML</a></li>
+                <li><a href="css.html">Les parametres CSS</a></li>
                 <li><a href="listes.html">Listes</a></li>
                 <li><a href="text.html">Text</a></li> 
                 <li><a href="tableaux.html">Exemples de tableaux</a></li> 
@@ -56,15 +63,15 @@
 
         <hr>
 
-        <h1 id="mail"; style="background-color:rgb(218, 125, 125)"><ins>Liens pour envoyer un email</ins></h1>
+        <h1 id="mail"><ins>Liens pour envoyer un email</ins></h1>
 
-        <p>
+        <p class="p2">
             <a href="mailto:adresse@truc.com">Envoyer un mail</a>
         </p>
 
         <hr>
 
-        <h1 id="target"; style="background-color:aquamarine"><ins>Liens dans une autre fenêtre</ins></h1>
+        <h1 id="target"><ins>Liens dans une autre fenêtre</ins></h1>
 
         <p>
             <h2>les mêmes liens qu'avant mais qui s'ouvrent dans une autre fenêtre</h2>
@@ -112,9 +119,30 @@
         <!-- Dans les anciennes version HTML, on utilisait aussi le tag "align" pour definir la position de l'image par rapport au text : align="left". Cette fonction à été
         supprimée depuis HTML 5 et est remplacée par une fonction CSS. Même si elle fonctionne toujours, on eviteras de l'employer.-->
 
-    </body>
+        <br>
+        <br>
 
-    <p><a href="#top">Sommet de la page</a></p>
+        <h1 id="iframe"><ins>Exemple d'iframe</ins></h1>
+
+        <iframe 
+            width="450"
+            height="350"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11039.727560341807!2d7.3602091000000005!3d46.23169915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sch!4v1648196136740!5m2!1sfr!2sch" 
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+       
+    </body>
+    
+    <hr>
+    <div id="footer">
+        <form action="#top">
+            <button class="a2" type="submit">Sommet de la page</button>
+        </form>
+        
+        <form action="liens.html">
+            <button class="a2" type="submit">1ere page</button>
+        </form>
+        </div>
 
 
 </html>

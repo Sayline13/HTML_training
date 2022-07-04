@@ -2,17 +2,204 @@
 
 <head>
     <title>[42] Exemples de tableaux</title>
+
+    <link href="CSS.css" type="text/css" rel="stylesheet"/>
+    
 </head>
 
 <body style="background-color:cornsilk">
 
     <h1 id="top"><ins><b>Exemples de tableaux</b></ins></h1>
 
-
-</body>
-
-
-<a href="#top">Retour au sommet de la page</a>
+    <p>En Html un tableau se construit ligne par ligne</p>
+    <br>
+    <table>
+        <tr>
+            <td>15</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>60</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+    </table>
 <br>
-<a href="liens.html">Retour à la première page</a>
+
+    <p>Meme si une cellule est vide il faut la représenter avec [td] ou [th]</p>
+    <p>scope="" permet de d'indiquer si l'en-tête concerne une colonne (col) ou une ligne (row)</p>
+
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">Samedi</th>
+            <th scope="col">Dimanche</th>
+        </tr>
+        <tr>
+            <th scope="row">Billets vendus :</th>
+            <td>120</td>
+            <td>135</td>
+        </tr>
+        <tr>
+            <th scope="row">Total des ventes :</th>
+            <td>600 €</td>
+            <td>675 €</td>
+        </tr>
+    </table>
+
+    <h2><ins>Colpan et Rowspan</ins></h2>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>ABC</th>
+            <th>BBC</th>
+            <th>CNN</th>
+        </tr>
+
+        <tr>
+            <th>18h00 - 19h00</th>
+            <td rowspan="2">Film</td>
+            <td colspan="2">Journal-TV</td>
+        </tr>
+
+        <tr>
+            <th>19h00 - 20h00</th>
+            <td>Sport</td>
+            <td>Comédie</td>
+        </tr>
+    </table>
+    <br>
+    <h2><ins>Tableaux longs</ins></h2>
+
+    <p>Lorsqu'un  tableau est suffisament long pour ne pas tenir intégramlement dans la hauteur de la pge, l'utilisation d'éléments [thead] et [tfoot] séparés permet au navigateur 
+        de conserver visibles l'en-tête et le pied du tableau tout en faisant défiler le contenu principal</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th><th>Recettes</th><th>Dépenses</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>1 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>2 janvier</th><td>320</td><td>42</td>
+            </tr>
+            <tr>
+                <th>3 janvier</th><td>140</td><td>12</td>
+            </tr>
+            <tr>
+                <th>4 janvier</th><td>420</td><td>42</td>
+            </tr>
+            <tr>
+                <th>5 janvier</th><td>312</td><td>36</td>
+            </tr>
+            <tr>
+                <th>6 janvier</th><td>530</td><td>360</td>
+            </tr>
+            <tr>
+                <th>7 janvier</th><td>210</td><td>30</td>
+            </tr>
+            <tr>
+                <th>8 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>9 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>10 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>11 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>12 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>13 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>14 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>15 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>16 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>17 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>18 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>19 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>20 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>21 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>22 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>23 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>24 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>25 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>26 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>27 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>28 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>29 janvier</th><td>250</td><td>36</td>
+            </tr>
+            <tr>
+                <th>30 janvier</th><td>250</td><td>36</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>4182</td>
+                <td>846</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+<br>
+<hr>
+<div id="footer">
+    <form action="#top">
+        <button class="a2" type="submit">Sommet de la page</button>
+    </form>
+    
+    <form action="liens.html">
+        <button class="a2" type="submit">1ere page</button>
+    </form>
+    </div>
 </html>

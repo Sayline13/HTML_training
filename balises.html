@@ -3,6 +3,14 @@
 <head>
 
     <title>[42] Les differentes balises HTML</title>
+    <meta name="description" content="Listes des balises HTML"/>
+    <meta name="keywords" content="html, balises, tutoriel"/>
+    <meta name="robots" content="nofollow"/>
+    <meta http-equiv="author" content="La belle Sayline"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="Fri, 04 Apr 2024 23:59:59 GMT"/>  
+
+    <link href="CSS.css" type="text/css" rel="stylesheet"/>
 
 </head>
 
@@ -23,11 +31,13 @@
         <li><a href="#images">Les images</a></li>
         <li><a href="#tableaux">Les tableaux</a></li>
         <li><a href="#form">Les formulaires</a></li>
+        <li><a href="#video">Video et Audio</a></li>
+        <li><a href="#divers">Balisages autres</a></li>
     </ol>
 
     <p style="color:red"><i>Sur cette page, et affin de faciliter la mise en page des exemples, les "[" représentent des "<" et les "]" des ">"</i></p>
 
-    <h2 id="titres" title="Hey vous m'avez trouvé, je suis l'exemple de la balise title ci dessous"><ins>Les titres<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="titres" title="Hey vous m'avez trouvé, je suis l'exemple de la balise title ci dessous"><ins>Les titres</ins></h2>
 
     <p>La taille est de plus en plus petite plus le niveau augmente</p>
 
@@ -41,10 +51,13 @@
         <li>title : ajoute une définition sur un élément au passage de la souris, allez, passez la souris sur le titre de ce paragraphe pour voir =)</li>
     </ul>
 
-    <h2 id="elements"><ins>Les éléments qui composent une page<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="elements"><ins>Les éléments qui composent une page</ins></h2>
 
     <ul>
         <li>head : fournit des informations relatives à la page et comprend généralement un élément "title"</li>
+            <ul>
+                <li>[!DOCTYPE html] : placé dans le head de la page, indique le type de document au navigateur</li>
+            </ul>
         <li>title : titre affiché sur la barre du navigateur, de l'onglet</li>
         <li>body : contenu qui doit être affiché dans la fenetre du navigateur, le "corps" de la page</li>
         <li>p : défini un paragraphe, un espace sera défini entre chaque paragraphe</li>
@@ -52,7 +65,7 @@
 
     <p>On peut définir des attributs au paragraphe, en les ajoutants à la balise. par exemple : [p lang="fr"]indique que le text du paragraphe est en français.</p>
 
-    <h2 id="text"><ins>Mise en forme du texte<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="text"><ins>Mise en forme du texte</ins></h2>
 
     <ul>
         <li>strong : mets le texte en <strong>gras</strong>, indique que le texte est d'une grande importance</li>
@@ -67,7 +80,7 @@
 
     </ul>
 
-    <h2 id="page"><ins>Mise en page générale<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="page"><ins>Mise en page générale</a></ins></h2>
 
     <ul>
         <li>br\ : ajoute un retour à la ligne sans lignes vides</li>
@@ -92,7 +105,7 @@
         <li>!-- : permet de mettre des annotations sur le code qui ne seront pas prises en compte par le navigateur</li>
     </ul>
 
-    <h2 id="listes"><ins>Les listes<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="listes"><ins>Les listes</ins></h2>
 
     <ul>
         <li>ol : défini une liste ordonnée et numerotée</li>
@@ -114,7 +127,7 @@
 
     <p>on peut avoir des sous-listes en remettant un [ul](ou autre). <a href="listes.html">Voir l'exemple sur cette page</a></p>
 
-    <h2 id="liens"><ins>Les liens<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="liens"><ins>Les liens</ins></h2>
 
     <p>url absolue = adresse complète menant à un site précis
         <br>
@@ -132,7 +145,7 @@
         <li>mailto : envoye un mail à l'adresse définie. [a href="mailto:adresse@truc.com"]Message affiché[/a]</li>
     </ul>
 
-    <h2 id="images"><ins>Les images<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="images"><ins>Les images</ins></h2>
 
     <p>Des exemples peuvent êtres trouvés <a href="liens.html#images">sur cette page</a></p>
 
@@ -151,7 +164,7 @@
     <p>[img src="source de l'image" alt="hey google trouve moi" title="le texte au passage de la souris height="100" width="100"/]</p>
     <p>La position de l'image par rapport au texte peut aussi être définie, <a href="liens.html#images">comme démontré ici</a></p>
 
-    <h2 id="tableaux"><ins>Les tableaux<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="tableaux"><ins>Les tableaux</ins></h2>
 
     <p>Des exemples peuvent êtres trouvés <a href="tableaux.html">sur cette page</a></p>
 
@@ -171,7 +184,7 @@
         <li>tfoot : pied d'un tableau (long)</li>   
     </ul>
 
-    <h2 id="form"><ins>Les formulaires<a href="#top"><img src="image01.png" height="10" width="10"></a></ins></h2>
+    <h2 id="form"><ins>Les formulaires</ins></h2>
 
     <p>Des exemples peuvent êtres trouvés <a href="formulaires.html">sur cette page</a></p>
 
@@ -240,9 +253,82 @@
                 <li>type="hidden" : permet d'ajouter des informations qui seront envoyées en même temps que le formulaire mais qui n'apparaissent pas sur la page</li>
             </ul>
     </ul>
+
+    <h2 id="video"><ins>Videos et Audio</ins></h2>
+
+    <p>[video src="" poster="" width="" height="" preload controls loop] [p]description de la video[/p][/video]</p>
+
+    <ul>
+        <li>video : reconnait plusieurs attributs pour le contrôle de la lecture de la video</li>
+        <li>src : précise le chemin de la vidéo</li>
+        <li>poster : permet d'afficher une mignature affichée pendant le chargement de la video</li>
+        <li>width, height : defini la taille de la video</li>
+    </ul>
+
+    <p>les attributs peuvent ne pas avoir de valeures, comme ici. Ces attributs sont comparables
+        a des interupteurs marche/arret. Si l'attribut est présent, l'option correspondante est activée :</p>
+
+    <ul>
+        <li>preload : indique au navigateur ce qu'il doit faire lorsque la page se charge. Voici les trois valeurs reconnues :</li>
+            <ul>
+                <li>none : le chargement de la video doit débuter suite a l'appui sur le bouton de lecture</li>
+                <li>auto : la video est telechargee des le chargement de la page</li>
+                <li>metadata : seules les informations generales sur la video sont recuperees</li>
+            </ul>
+        <li>controls : indique que le navigateur doit fournir ces propres controles pour la lecture</li>
+        <li>autoplay : stipule que la lecture doit demarrer automatiquement</li>
+        <li>loop : precise que la lecture doit se faire en boucle</li>
+    </ul>
+
+    <p>[audio src="" controls autoplay] [p]message a afficher si le lecteur n'est pas pris en charge[/p][/audio]</p>
+    <p><i>les attributs sont simmilaires aux videos (src, controls, autoplay, preload, loop)</i></p>
+
+    <h2 id="divers"><ins>Balisages autres</ins></h2>
+
+    <ul>
+        <li>id="" : permet d'identifier un élément de niveau bloc de la page. Utile pour faire un lien vers cet élément ou pour la mise en forme CSS</li>
+        <li>class="" : un peu pareil que "id" mais peut contenir plusieures classe à l'intérieur de "" ("class1 class2 class3")</li>
+        <li>niveau bloc : éléments qui seront toujours affichés sur une nouvelle ligne dans le navigateur (ex: h1, p, ul, li,...)</li>
+        <li>niveau texte : toujours affichés sur la même ligne que les éléments qui l'entourent. (ex : a, b, em, img,...)</li>
+        <li>div : permet de regrouper un jeu d'élements dans une boite de niveau bloc. En ajoutant un attribut "id' permet de créer des regles CSS pour tout un bloc.</li>
+        <li>span : equivalent en-ligne de l'element div. Permet de contenir une portion de texte.</li>
+        <li>iframe : cadre incorporé (<a href="liens.html#iframe">Voir exemple ici</a></li>
+            <ul>
+                <li>src : précise l'url de la page a afficher dans le cadre</li>
+                <li>height : precise la hauteur du cadre en pixels</li>
+                <li>width : precise la largeur du cadre en pixels</li>
+                <li>seamless : peut etre incorporer pour indiquer que les barres de defilement ne sont pas souhaitees</li>
+            </ul>
+        <li>meta name="" : reside dans l'element head et comprend des informations relatives a la page web. N'as pas besoin de balaise de fermeture. Informations fournies par ces attributs :</li>
+            <ul>
+                <li><ins>Des exemples sont visibles dans le code source de cette page</ins></li>
+                <li>Syntaxe : [meta name="description" content="bah la description lol"/] </li>
+                <li>description : contient une description de la page dont les moteurs de recherches se servent pour referencer la page</li>
+                <li>keywords : contient une liste de termes (tags) separes par des virgules. Permet de trouver la page</li>
+                <li>robots : indique si les moteurs de recherche doivent inclure la page.</li>
+                    <ul>
+                        <li>noindex : stipule qu'elle ne doit pas être presente dans les resultats</li>
+                        <li>nofollow : indiquer que les moteurs de recherche peuvent l'ajouter, mais sans les pages liees qu'elle comprend</li>
+                    </ul>
+            </ul>
+        <li>meta http-equiv="" : couple d'attributs et contents :</li>
+            <ul>
+                <li>author : indique le créateur de la page</li>
+                <li>pragma : evite que le navigateur place la page dans son cache, autrement dis, il ne la conserve pas localement</li>
+                <li>expires : permet d'indiquer a quel  moment la page doit expirer et ne plus etre conservee dans le cache</li>
+            </ul>
+
+
+    </ul>
 </body>
 <hr>
-<a href="#top">Sommet de la page</a>
-<br>
-<a href="liens.html">retour à la première page</a>
+<div id="footer">
+    <form action="#top">
+        <button class="a2" type="submit">Sommet de la page</button>
+    </form>
+    
+    <form action="liens.html">
+        <button class="a2" type="submit">1ere page</button>
+    </form>
+    </div>
 </html>
